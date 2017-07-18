@@ -14,13 +14,17 @@ public class BoxWithCoin : MonoBehaviour {
 	void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hit the box");
-        InvokeRepeating("moveTheCoin", 0, 0.1f);
-            
+        InvokeRepeating("moveTheCoin", 0, 0.01f);
+        
     }
 
     void moveTheCoin()
     {
-        coin.transform.Translate(new Vector3(0, 2));
+        coin.transform.Translate(new Vector3(0, 1));
+        if(coin.transform.position.y >= 50f){
+            CancelInvoke("moveTheCoin");
+            DestroyObject(coin);
+        }
 
     }
 

@@ -23,11 +23,16 @@ public class player : MonoBehaviour {
 
     void Update()
     {
-        rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0));
+        if(this.transform.position.y > 4)
+        {
+            rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
+        }
         
+       
+
         //if (controller.isGrounded)
         //{
-            
+
         //    moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, 0);
         //    moveDirection = transform.TransformDirection(moveDirection);
         //    moveDirection *= speed;
@@ -40,6 +45,8 @@ public class player : MonoBehaviour {
 
     private void OnCollisionStay(Collision collision)
     {
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0);
+
         if (Input.GetKey(KeyCode.Space))
         {
             Jump();
@@ -48,7 +55,7 @@ public class player : MonoBehaviour {
 
     private void Jump()
     {
-        rb.AddForce(new Vector3(0, 1 * jumpSpeed, 0));
+        rb.AddForce(new Vector3(0, 10* jumpSpeed, 0));
     }
 
     //private void OnCollisionEnter(Collision collision)
