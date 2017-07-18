@@ -23,8 +23,9 @@ public class player : MonoBehaviour {
 
     void Update()
     {
-        if(this.transform.position.y > 4)
+        if(this.transform.position.y > 6)
         {
+            Debug.Log("damping");
             rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
         }
         
