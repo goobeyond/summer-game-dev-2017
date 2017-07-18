@@ -576,7 +576,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 76518b19d5678cc4cbe15c65c43bd126, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.628
+  m_Volume: 0.112
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -782,14 +782,14 @@ RectTransform:
   m_GameObject: {fileID: 1088780019}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.440309, y: 4.440309, z: 4.440309}
+  m_LocalScale: {x: 4.9399414, y: 4.440309, z: 4.440309}
   m_Children: []
   m_Father: {fileID: 1058431170}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79.1, y: 176.1}
+  m_AnchoredPosition: {x: 103, y: 176.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1088780021
@@ -928,7 +928,7 @@ Transform:
   m_GameObject: {fileID: 1329043392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.31, z: 0}
-  m_LocalScale: {x: 1, y: 1.0912342, z: 1}
+  m_LocalScale: {x: 1.5595324, y: 1.7018149, z: 1.5595322}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1076,7 +1076,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1409352800}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1409352800
