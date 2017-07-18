@@ -20,12 +20,17 @@ public class BoxWithCoin : MonoBehaviour {
 
     void moveTheCoin()
     {
-        coin.transform.Translate(new Vector3(0, 1));
-        if(coin.transform.position.y >= 50f){
+        if (!coin)
+        {
+            return;
+        }
+
+        if (coin.transform.position.y >= 50f){
             CancelInvoke("moveTheCoin");
             DestroyObject(coin);
         }
-
+       
+        coin.transform.Translate(new Vector3(0, 1));
     }
 
 }
