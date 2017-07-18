@@ -11,20 +11,17 @@ public class BoxWithCoin : MonoBehaviour {
         coin = transform.Find("coin").gameObject;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    private void OnCollisionEnter()
+	void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hit the box");
         InvokeRepeating("moveTheCoin", 0, 0.1f);
+            
     }
 
     void moveTheCoin()
     {
-        coin.transform.Translate(new Vector3(0, 1));
+        coin.transform.Translate(new Vector3(0, 2));
+
     }
 
 }
