@@ -6,16 +6,16 @@ public class Respawn : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        //Debug.Log("hey");
+    }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hey");
+        Debug.Log("hit");
     }
 }
