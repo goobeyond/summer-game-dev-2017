@@ -12,22 +12,27 @@ public class player : MonoBehaviour {
     private Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
     Rigidbody rb;
+    Text playerSays;
+    bool isGrounded;
    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
-        //Text[] inputs = GameObject.Find("Canvas").GetComponentsInChildren<Text>();
-        //inputs[0].text = "Text here";
+       playerSays = GameObject.Find("Canvas").GetComponentInChildren<Text>();
+        
     }
 
     void Update()
     {
-        if(this.transform.position.y > 6)
-        {
-            Debug.Log("damping");
-            rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
-        }
+        if(!isGrounded)
+        rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed , 0, 0));
+            
+            //if(this.transform.position.y > 6)
+            //{
+            //    Debug.Log("damping");
+            //    rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
+            //}
         
        
 
@@ -46,6 +51,7 @@ public class player : MonoBehaviour {
 
     private void OnCollisionStay(Collision collision)
     {
+        isGrounded = true;
         rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0);
 
         if (Input.GetKey(KeyCode.Space))
@@ -54,15 +60,21 @@ public class player : MonoBehaviour {
         }
     }
 
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
+    }
+
     private void Jump()
     {
         rb.AddForce(new Vector3(0, 10* jumpSpeed, 0));
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    Debug.Log("collided in player");
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("player hit "+ collision.gameObject.name);
+        playerSays.text = collision.gameObject.name;
+    }
 
     //void OnGUI()
     //{
