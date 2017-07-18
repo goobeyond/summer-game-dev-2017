@@ -11,8 +11,7 @@ public class player : MonoBehaviour {
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
     CharacterController controller;
-    Canvas canvas;  
-
+   
     void Start()
     {
         controller = GetComponent<CharacterController>();
