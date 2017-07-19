@@ -22,5 +22,10 @@ public class Respawn : MonoBehaviour {
         //var Currentpos = other.gameObject.transform.position;
         var Resetpos = new Vector3(0, 10, 0);
         other.gameObject.transform.position = Resetpos;
+        var currentDir = other.gameObject.GetComponent<player>().direction;
+        if (currentDir != 1)
+        {
+            other.gameObject.GetComponent<player>().direction = 1;
+        }
     }
 }
