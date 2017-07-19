@@ -18,6 +18,7 @@ public class player : MonoBehaviour
     bool isGrounded;
     VignetteAndChromaticAberration CameraEffect;
     float buildUp;
+    public int direction = -1;
 
     void Start()
     {
@@ -63,7 +64,7 @@ public class player : MonoBehaviour
         Debug.Log("grounded "+ isGrounded);
 
         if(isGrounded)
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0);
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal")* direction * speed, 0, 0);
 
         if (Input.GetKey(KeyCode.Space))
         {
