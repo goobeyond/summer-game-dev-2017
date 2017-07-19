@@ -14,6 +14,7 @@ public class IntroScene : MonoBehaviour {
     private bool Trigger1 = false;
     private float BuildUP;
     private float BuildUP2;
+    public AudioSource Music;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,7 @@ public class IntroScene : MonoBehaviour {
         {
             BuildUP += 0.18f * Time.deltaTime;
             CameraEffect.intensity = Mathf.Lerp(0.0f, 1.0f, BuildUP);
+            Music.volume = Mathf.Lerp(1.0f, 0.0f, BuildUP);
         }
         if (BuildUP == 1.0f || BuildUP>1.0f)
         {
