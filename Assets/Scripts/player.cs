@@ -18,6 +18,8 @@ public class player : MonoBehaviour
     bool isGrounded;
     VignetteAndChromaticAberration CameraEffect;
     float buildUp;
+    private bool TextIsSaid = false;
+    private float Counter;
 
     void Start()
     {
@@ -35,6 +37,16 @@ public class player : MonoBehaviour
         buildUp += 0.5f * Time.deltaTime;
         CameraEffect.intensity = Mathf.Lerp(1.0f, 0.0f, buildUp);
 
+        if (TextIsSaid == true)
+        {
+            Counter += 1 * Time.deltaTime;
+            if (Counter > 3)
+            {
+                TextIsSaid = false;
+                Counter = 0;
+                playerSays.text = null;
+            }
+        }
         //if(this.transform.position.y > 6)
         //{
         //    Debug.Log("damping");
@@ -96,7 +108,11 @@ public class player : MonoBehaviour
     void SayName(GameObject whatWasHit)
     {
         if (whatWasHit.name != "floor")
+        {
             playerSays.text = whatWasHit.name;
+            TextIsSaid = true;
+            Counter = 0;
+        }
     }
     //void OnGUI()
     //{
