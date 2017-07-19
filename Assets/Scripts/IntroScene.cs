@@ -40,6 +40,10 @@ public class IntroScene : MonoBehaviour {
             BuildUP += 0.18f * Time.deltaTime;
             CameraEffect.intensity = Mathf.Lerp(0.0f, 1.0f, BuildUP);
         }
+        if (BuildUP == 1.0f || BuildUP>1.0f)
+        {
+            Application.LoadLevel("PlatformerParody");
+        }
 
         BuildUP2 += 0.05f * Time.deltaTime;
         CameraEffect.blur = Mathf.Lerp(0.0f, 1.0f, BuildUP2);
