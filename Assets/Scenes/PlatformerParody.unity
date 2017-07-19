@@ -1065,6 +1065,23 @@ Prefab:
       propertyPath: m_Name
       value: 'I give up '
       objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33466779672640018, guid: 6ad3d29d6c4922044ab577a5a4cdef1b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 748c6a2e1984fee468e9bc3d888402a4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
   m_IsPrefabParent: 0
@@ -1219,6 +1236,23 @@ Prefab:
       propertyPath: m_Name
       value: Where are the coins going ?
       objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33466779672640018, guid: 6ad3d29d6c4922044ab577a5a4cdef1b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 748c6a2e1984fee468e9bc3d888402a4, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
   m_IsPrefabParent: 0
@@ -1310,6 +1344,23 @@ Prefab:
     - target: {fileID: 1039544023383276, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
       propertyPath: m_Name
       value: WTF ?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 33466779672640018, guid: 6ad3d29d6c4922044ab577a5a4cdef1b,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 748c6a2e1984fee468e9bc3d888402a4, type: 3}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4257551925281566, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ad3d29d6c4922044ab577a5a4cdef1b, type: 2}
