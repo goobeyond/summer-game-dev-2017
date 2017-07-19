@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.ImageEffects;
 
 public class player : MonoBehaviour
 {
@@ -15,19 +16,24 @@ public class player : MonoBehaviour
     Rigidbody rb;
     Text playerSays;
     bool isGrounded;
+    VignetteAndChromaticAberration CameraEffect;
+    float buildUp;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
         playerSays = GameObject.Find("Canvas").GetComponentInChildren<Text>();
-
+        CameraEffect = GetComponentInChildren<Camera>().GetComponent<VignetteAndChromaticAberration>();
     }
 
     void Update()
     {
         if (!isGrounded)
             rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0));
+
+        buildUp += 0.5f * Time.deltaTime;
+        CameraEffect.intensity = Mathf.Lerp(1.0f, 0.0f, buildUp);
 
         //if(this.transform.position.y > 6)
         //{
