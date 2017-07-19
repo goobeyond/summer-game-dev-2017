@@ -18,12 +18,12 @@ public class player : MonoBehaviour
     bool isGrounded;
     VignetteAndChromaticAberration CameraEffect;
     float buildUp;
-<<<<<<< HEAD
+
     private bool TextIsSaid = false;
     private float Counter;
-=======
+
     public int direction = -1;
->>>>>>> 94266cc71467e57d80adf50d7dff57fe38cf1fac
+
 
     void Start()
     {
