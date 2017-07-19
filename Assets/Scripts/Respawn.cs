@@ -20,7 +20,7 @@ public class Respawn : MonoBehaviour {
     {
         //Debug.Log("hit");
         //var Currentpos = other.gameObject.transform.position;
-        var Resetpos = new Vector3(0, 0, 0);
+        var Resetpos = new Vector3(0, 10, 0);
         other.gameObject.transform.position = Resetpos;
     }
 }

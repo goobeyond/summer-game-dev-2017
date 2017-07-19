@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class player : MonoBehaviour {
+public class player : MonoBehaviour
+{
 
     public float speed;
     public float jumpSpeed;
@@ -14,27 +15,27 @@ public class player : MonoBehaviour {
     Rigidbody rb;
     Text playerSays;
     bool isGrounded;
-   
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
-       playerSays = GameObject.Find("Canvas").GetComponentInChildren<Text>();
-        
+        playerSays = GameObject.Find("Canvas").GetComponentInChildren<Text>();
+
     }
 
     void Update()
     {
-        if(!isGrounded)
-        rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed , 0, 0));
-            
-            //if(this.transform.position.y > 6)
-            //{
-            //    Debug.Log("damping");
-            //    rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
-            //}
-        
-       
+        if (!isGrounded)
+            rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0));
+
+        //if(this.transform.position.y > 6)
+        //{
+        //    Debug.Log("damping");
+        //    rb.velocity = (new Vector3(Input.GetAxis("Horizontal") * speed, -5, 0));
+        //}
+
+
 
         //if (controller.isGrounded)
         //{
@@ -51,7 +52,11 @@ public class player : MonoBehaviour {
 
     private void OnCollisionStay(Collision collision)
     {
-        isGrounded = true;
+        isGrounded = (collision.gameObject.name == "floor") ? true : false;
+
+        Debug.Log("grounded "+ isGrounded);
+
+        if(isGrounded)
         rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0);
 
         if (Input.GetKey(KeyCode.Space))
@@ -67,13 +72,14 @@ public class player : MonoBehaviour {
 
     private void Jump()
     {
-        rb.AddForce(new Vector3(0, 10* jumpSpeed, 0));
+        rb.AddForce(new Vector3(0, 10 * jumpSpeed, 0));
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("player hit "+ collision.gameObject.name);
-        playerSays.text = collision.gameObject.name;
+        //Debug.Log("player hit " + collision.gameObject.name);
+        if (collision.gameObject.name != "floor")
+            playerSays.text = collision.gameObject.name;
     }
 
     //void OnGUI()
