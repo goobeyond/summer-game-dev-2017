@@ -21,5 +21,6 @@ public class Pipe : MonoBehaviour {
         //var Currentpos = other.gameObject.transform.position;
         var Resetpos = Location2.transform.position;
         other.gameObject.transform.position = Resetpos;
+        CancelInvoke("MoveCamera");
     }
 }

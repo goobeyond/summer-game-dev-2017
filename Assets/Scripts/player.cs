@@ -77,11 +77,21 @@ public class player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Debug.Log("player hit " + collision.gameObject.name);
-        if (collision.gameObject.name != "floor")
-            playerSays.text = collision.gameObject.name;
+        SayName(collision.gameObject);
+        
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        SayName(other.gameObject);
+    }
+
+
+    void SayName(GameObject whatWasHit)
+    {
+        if (whatWasHit.name != "floor")
+            playerSays.text = whatWasHit.name;
+    }
     //void OnGUI()
     //{
     //    GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "This is a box");
