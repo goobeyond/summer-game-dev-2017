@@ -1130,12 +1130,12 @@ Prefab:
     - target: {fileID: 54967872085278162, guid: 9c3977dc8174dc24abd44db6840acfa9,
         type: 2}
       propertyPath: m_Drag
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 114894622385978180, guid: 9c3977dc8174dc24abd44db6840acfa9,
         type: 2}
       propertyPath: jumpSpeed
-      value: 200
+      value: 33.59
       objectReference: {fileID: 0}
     - target: {fileID: 224280700089659178, guid: 9c3977dc8174dc24abd44db6840acfa9,
         type: 2}
@@ -1160,7 +1160,7 @@ Prefab:
     - target: {fileID: 54967872085278162, guid: 9c3977dc8174dc24abd44db6840acfa9,
         type: 2}
       propertyPath: m_Mass
-      value: 5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 114894622385978180, guid: 9c3977dc8174dc24abd44db6840acfa9,
         type: 2}
@@ -1172,6 +1172,11 @@ Prefab:
       propertyPath: ScoreBoard
       value: 
       objectReference: {fileID: 1156455207}
+    - target: {fileID: 114894622385978180, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: airSpeed
+      value: 255.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
   m_IsPrefabParent: 0

@@ -20,10 +20,11 @@ public class player : MonoBehaviour
     float buildUp;
     public int Score;
     public Text ScoreBoard;
+    public float airSpeed;
 
     private bool TextIsSaid = false;
     private float Counter;
-
+    public bool canMove = true;
     public int direction = -1;
 
 
@@ -37,8 +38,17 @@ public class player : MonoBehaviour
 
     void Update()
     {
-        if (!isGrounded)
-            rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed, 0, 0));
+        if (!isGrounded & canMove)
+        {
+            Debug.Log(rb.velocity.sqrMagnitude);
+            //airSpeed = Input.GetAxis("Horizontal") * speed * 2;
+            if (rb.velocity.sqrMagnitude < airSpeed)
+            {
+                rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * speed * 2, 0, 0));
+            }
+            
+        }
+            
 
         buildUp += 0.5f * Time.deltaTime;
         CameraEffect.intensity = Mathf.Lerp(1.0f, 0.0f, buildUp);
@@ -83,8 +93,8 @@ public class player : MonoBehaviour
 
         //Debug.Log("grounded "+ isGrounded);
 
-        if(isGrounded)
-        rb.velocity = new Vector3(Input.GetAxis("Horizontal")* direction * speed, 0, 0);
+        if (isGrounded & canMove)
+            rb.velocity = new Vector3(Input.GetAxis("Horizontal") * direction * speed, 0, 0);
 
         if (Input.GetKey(KeyCode.Space))
         {
@@ -109,7 +119,7 @@ public class player : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         SayName(collision.gameObject);
-        
+
     }
 
     private void OnTriggerEnter(Collider other)

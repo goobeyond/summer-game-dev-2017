@@ -15,7 +15,7 @@ public class BoxWithCoin : MonoBehaviour {
 	
 	void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("hit the box");
+        //Debug.Log("hit the box");
         InvokeRepeating("moveTheCoin", 0, 0.01f);
         BoxSound.Play();
     }

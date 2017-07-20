@@ -24,5 +24,7 @@ public class Pipe : MonoBehaviour {
         other.gameObject.transform.position = Resetpos;
         CancelInvoke("MoveCamera");
         WarpSound.Play();
+        other.gameObject.GetComponent<player>().canMove = true;
+
     }
 }

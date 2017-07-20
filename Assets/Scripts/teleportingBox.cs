@@ -16,15 +16,16 @@ public class teleportingBox : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("teleport hit " + collision.gameObject.name);
+        //Debug.Log("teleport hit " + collision.gameObject.name);
         
         var currentPosition = collision.gameObject.transform.position;
-        Debug.Log(currentPosition);
+        //Debug.Log(currentPosition);
         var newPosition = new Vector3(currentPosition.x + 10, currentPosition.y + 10, currentPosition.z);
-        Debug.Log("new position " + newPosition);
+       // Debug.Log("new position " + newPosition);
         if(collision.gameObject.tag == "player")
         {
             collision.gameObject.transform.position = newPosition;
+            collision.gameObject.GetComponent<player>().canMove = true;
         }
         
     }

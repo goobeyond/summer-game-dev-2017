@@ -28,7 +28,7 @@ public class IntroScene : MonoBehaviour {
 	void Update ()
     {
         counter = counter +1 * (Time.deltaTime);
-        Debug.Log(counter);
+        //Debug.Log(counter);
         if (counter > TimeToNext && Resting==false)
         {
             AnimationOne.SetActive(false);

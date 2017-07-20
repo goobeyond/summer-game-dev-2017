@@ -5,7 +5,7 @@ using UnityEngine;
 public class cameraMover : MonoBehaviour {
 
     Camera[] cameras;
-    GameObject player;
+    GameObject _player;
     int counter;
 
     // Use this for initialization
@@ -18,26 +18,28 @@ public class cameraMover : MonoBehaviour {
     void MoveCamera()
     {
         var oldposcamera = cameras[1].transform.position;
-        var oldposplayer = player.transform.position;
+        var oldposplayer = _player.transform.position;
         oldposcamera.x += 0.1f;
         oldposplayer.x += 0.05f;
         cameras[1].transform.position = oldposcamera;
-        player.transform.position = oldposplayer;
+        _player.transform.position = oldposplayer;
         counter++;
-        if(counter > 500)
+        if(counter > 300)
         {
             cameras[0].enabled = true;
             cameras[1].enabled = false;
+            
             CancelInvoke("MoveCamera");
         }
-        Debug.Log(counter);
+        //Debug.Log(counter);
     }   
 
     private void OnTriggerEnter(Collider other)
     {
         cameras[0].enabled = false;
         cameras[1].enabled = true;
-        player = other.gameObject;
+        _player = other.gameObject;
+        _player.GetComponent<player>().canMove = false;
         InvokeRepeating("MoveCamera", 0, 0.01f);
     }
 }
