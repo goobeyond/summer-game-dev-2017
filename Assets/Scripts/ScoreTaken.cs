@@ -14,6 +14,7 @@ public class ScoreTaken : MonoBehaviour {
     public GameObject Sleep;
     public GameObject WakeUp;
     float Counter;
+    public AudioSource Scream;
 
 
     // Use this for initialization
@@ -41,10 +42,16 @@ public class ScoreTaken : MonoBehaviour {
         {
             Counter += 1 * Time.deltaTime;
 
-            if(Counter> 2.5 && Counter < 3.5)
+            if(Counter> 2.0f&& Counter<2.1f)
+            {
+                Scream.Play();
+            }
+
+            if(Counter> 2.5 && Counter < 2.7)
             {
                 Sleep.SetActive(false);
                 WakeUp.SetActive(true);
+      
             }
             if (Counter > 5)
             {
