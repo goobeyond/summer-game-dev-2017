@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CoinGrab : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
+    public AudioSource CoinSound;
 	void Start () {
-		
+	
 	}
 	
 	// Update is called once per frame
@@ -16,7 +17,8 @@ public class CoinGrab : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collected");
+        //Debug.Log("Collected");
+        CoinSound.Play();
         gameObject.SetActive(false);
         other.gameObject.GetComponent<player>().Score += 1;
     }

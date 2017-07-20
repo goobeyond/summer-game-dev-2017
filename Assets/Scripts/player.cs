@@ -89,6 +89,10 @@ public class player : MonoBehaviour
         {
             Jump();
         }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Jump();
+        }
     }
 
     private void OnCollisionExit(Collision collision)
