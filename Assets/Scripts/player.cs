@@ -74,6 +74,7 @@ public class player : MonoBehaviour
         //controller.Move(moveDirection * Time.deltaTime);
 
         ScoreBoard.text = Score + " " + "/ 7 Coins Collected";
+        PlayerPrefs.SetInt("Score", Score);
     }
 
     private void OnCollisionStay(Collision collision)
