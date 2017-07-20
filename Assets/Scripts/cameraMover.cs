@@ -7,6 +7,7 @@ public class cameraMover : MonoBehaviour {
     Camera[] cameras;
     GameObject _player;
     int counter;
+    Vector3 cameraOrigPosition;
 
     // Use this for initialization
     void Start () {
@@ -28,7 +29,8 @@ public class cameraMover : MonoBehaviour {
         {
             cameras[0].enabled = true;
             cameras[1].enabled = false;
-            
+            counter = 0;
+            cameras[1].transform.position = cameraOrigPosition;
             CancelInvoke("MoveCamera");
         }
         //Debug.Log(counter);
@@ -38,6 +40,7 @@ public class cameraMover : MonoBehaviour {
     {
         cameras[0].enabled = false;
         cameras[1].enabled = true;
+        cameraOrigPosition = cameras[1].transform.position;
         _player = other.gameObject;
         _player.GetComponent<player>().canMove = false;
         InvokeRepeating("MoveCamera", 0, 0.01f);
