@@ -5,6 +5,7 @@ using UnityEngine;
 public class Pipe : MonoBehaviour {
 
     public GameObject Location2;
+    public AudioSource WarpSound;
 
 	// Use this for initialization
 	void Start () {
@@ -22,5 +23,6 @@ public class Pipe : MonoBehaviour {
         var Resetpos = Location2.transform.position;
         other.gameObject.transform.position = Resetpos;
         CancelInvoke("MoveCamera");
+        WarpSound.Play();
     }
 }
