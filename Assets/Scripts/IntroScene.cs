@@ -21,6 +21,7 @@ public class IntroScene : MonoBehaviour {
         AnimationOne.SetActive(true);
         Sleep.SetActive(false);
        CameraEffect =  FindObjectOfType<Camera>().GetComponent<VignetteAndChromaticAberration>();
+        PlayerPrefs.DeleteAll();
     }
 	
 	// Update is called once per frame

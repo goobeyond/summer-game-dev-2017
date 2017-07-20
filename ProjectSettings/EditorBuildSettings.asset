@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/IntroLoad.unity
     guid: be5d6ee878558fb44ac5281cc7206613
+  - enabled: 1
+    path: Assets/Scenes/EndScore.unity
+    guid: 1885e0d4bd5b8aa469f4cd5a07dacfdf

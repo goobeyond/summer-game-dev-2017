@@ -354,6 +354,11 @@ Prefab:
       propertyPath: WarpSound
       value: 
       objectReference: {fileID: 1896274912}
+    - target: {fileID: 23083352295388174, guid: c35c8dd258a59bb4cad0039f23493017,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaf4b526cd75f45469f4031a917f6d98, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c35c8dd258a59bb4cad0039f23493017, type: 2}
   m_IsPrefabParent: 0
@@ -1444,6 +1449,11 @@ Prefab:
       propertyPath: m_Name
       value: Progression? :o
       objectReference: {fileID: 0}
+    - target: {fileID: 23083352295388174, guid: c35c8dd258a59bb4cad0039f23493017,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: aaf4b526cd75f45469f4031a917f6d98, type: 2}
     m_RemovedComponents:
     - {fileID: 114724453136074576, guid: c35c8dd258a59bb4cad0039f23493017, type: 2}
     - {fileID: 65866711147403364, guid: c35c8dd258a59bb4cad0039f23493017, type: 2}
@@ -1470,6 +1480,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.2054, y: 7.2706227, z: 0.982113}
   m_Center: {x: 0.042870607, y: 3.1353126, z: 0.00894326}
+--- !u!114 &464218210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 464218208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dffde596bc745146bc0f000f6d97688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &466009566
 Prefab:
   m_ObjectHideFlags: 0
@@ -1990,7 +2011,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ff50bc1b1eee21f4ebcc0f2dc3f9aed3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4919,7 +4940,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aaf4b526cd75f45469f4031a917f6d98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5653,7 +5674,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: aaf4b526cd75f45469f4031a917f6d98, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
