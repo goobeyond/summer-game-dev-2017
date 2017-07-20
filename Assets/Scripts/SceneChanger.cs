@@ -34,7 +34,7 @@ public class SceneChanger : MonoBehaviour {
         }
         if (ShowOff == true)
         {
-            BuildUP += 0.18f * Time.deltaTime;
+            BuildUP += 0.3f * Time.deltaTime;
             CameraEffect.intensity = Mathf.Lerp(0.0f, 1.0f, BuildUP);
 
             if (BuildUP > 0.9f)
