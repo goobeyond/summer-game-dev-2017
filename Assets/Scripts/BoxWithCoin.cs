@@ -5,17 +5,19 @@ using UnityEngine;
 public class BoxWithCoin : MonoBehaviour {
 
     GameObject coin;
+    public AudioSource BoxSound;
 
 	// Use this for initialization
 	void Start () {
         coin = transform.Find("coin").gameObject;
+        //BoxSound = GetComponentInParent<AudioSource>();
 	}
 	
 	void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hit the box");
         InvokeRepeating("moveTheCoin", 0, 0.01f);
-        
+        BoxSound.Play();
     }
 
     void moveTheCoin()
