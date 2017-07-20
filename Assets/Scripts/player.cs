@@ -18,6 +18,8 @@ public class player : MonoBehaviour
     bool isGrounded;
     VignetteAndChromaticAberration CameraEffect;
     float buildUp;
+    public int Score;
+    public Text ScoreBoard;
 
     private bool TextIsSaid = false;
     private float Counter;
@@ -70,13 +72,15 @@ public class player : MonoBehaviour
         //}
         //moveDirection.y -= gravity * Time.deltaTime;
         //controller.Move(moveDirection * Time.deltaTime);
+
+        ScoreBoard.text = Score + " " + "/ 7 Coins Collected";
     }
 
     private void OnCollisionStay(Collision collision)
     {
         isGrounded = (collision.gameObject.name == "floor") ? true : false;
 
-        Debug.Log("grounded "+ isGrounded);
+        //Debug.Log("grounded "+ isGrounded);
 
         if(isGrounded)
         rb.velocity = new Vector3(Input.GetAxis("Horizontal")* direction * speed, 0, 0);
