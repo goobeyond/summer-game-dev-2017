@@ -5869,7 +5869,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859558509848238, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.33
+      value: 6.84
       objectReference: {fileID: 0}
     - target: {fileID: 4859558509848238, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5927,7 +5927,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4859558509848238, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.58
+      value: -5.74
       objectReference: {fileID: 0}
     - target: {fileID: 4859558509848238, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
       propertyPath: m_LocalRotation.y
@@ -5958,6 +5958,38 @@ Prefab:
       propertyPath: JumpSound
       value: 
       objectReference: {fileID: 1130452072}
+    - target: {fileID: 33686418399591656, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: a79e0d86b58d3364596ecc1a1f07ec8f, type: 3}
+    - target: {fileID: 136806469671636300, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Height
+      value: 3.9607115
+      objectReference: {fileID: 0}
+    - target: {fileID: 136806469671636300, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.9018764
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617404672696884, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617404672696884, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617404672696884, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20255874966927370, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: field of view
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
   m_IsPrefabParent: 0

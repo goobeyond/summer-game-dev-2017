@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4208909, g: 0.71482235, b: 0.8809126, a: 1}
+  m_IndirectSpecularColor: {r: 0.14813069, g: 0.4697257, b: 0.7510786, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 250930320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.69, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1511383919}
@@ -523,7 +523,7 @@ TrailRenderer:
   m_Time: 0.5
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -565,7 +565,7 @@ TrailRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 2
+    numCornerVertices: 0
     numCapVertices: 3
     alignment: 0
     textureMode: 0
@@ -1392,6 +1392,21 @@ Prefab:
       propertyPath: JumpSound
       value: 
       objectReference: {fileID: 1895924834}
+    - target: {fileID: 33686418399591656, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: a79e0d86b58d3364596ecc1a1f07ec8f, type: 3}
+    - target: {fileID: 136806469671636300, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Height
+      value: 3.9582248
+      objectReference: {fileID: 0}
+    - target: {fileID: 136806469671636300, guid: 9c3977dc8174dc24abd44db6840acfa9,
+        type: 2}
+      propertyPath: m_Center.y
+      value: 1.8289468
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9c3977dc8174dc24abd44db6840acfa9, type: 2}
   m_IsPrefabParent: 0
