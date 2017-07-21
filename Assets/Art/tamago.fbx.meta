@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f02ff7af4e6e23b4eb611895eb27a768
-timeCreated: 1500638095
+guid: d490408efa656c241b6c3fc70e533b8b
+timeCreated: 1500639152
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -9,7 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: House1
+    4300000: tamago
     9500000: //RootNode
   materials:
     importMaterials: 1
