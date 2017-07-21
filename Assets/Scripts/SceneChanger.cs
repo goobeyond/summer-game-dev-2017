@@ -39,7 +39,7 @@ public class SceneChanger : MonoBehaviour {
 
             if (BuildUP > 0.9f)
             {
-                _scenename = "EndScore";
+                _scenename = "Level2";
                 start = true;
             }
         }

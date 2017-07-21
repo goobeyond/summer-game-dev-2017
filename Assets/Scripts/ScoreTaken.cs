@@ -33,7 +33,7 @@ public class ScoreTaken : MonoBehaviour {
         if (ScoreText != null)
         {
             ScoreNumber = PlayerPrefs.GetInt("Score");
-            ScoreText.text = "Total Coins Collected: " + ScoreNumber + " / 7";
+            ScoreText.text = "Total Coins Collected: " + ScoreNumber + " / 14";
         }
 
         NewMethod();

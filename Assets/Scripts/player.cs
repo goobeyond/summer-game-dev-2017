@@ -19,6 +19,7 @@ public class player : MonoBehaviour
     VignetteAndChromaticAberration CameraEffect;
     float buildUp;
     public int Score;
+    private int PreviouScore;
     public Text ScoreBoard;
     public float airSpeed;
 
@@ -26,6 +27,7 @@ public class player : MonoBehaviour
     private float Counter;
     public bool canMove = true;
     public int direction = -1;
+    public AudioSource JumpSound;
 
 
     void Start()
@@ -34,6 +36,7 @@ public class player : MonoBehaviour
         controller = GetComponent<CharacterController>();
         playerSays = GameObject.Find("Canvas").GetComponentInChildren<Text>();
         CameraEffect = GetComponentInChildren<Camera>().GetComponent<VignetteAndChromaticAberration>();
+        PreviouScore = PlayerPrefs.GetInt("Score");
     }
 
     void Update()
@@ -84,7 +87,8 @@ public class player : MonoBehaviour
         //controller.Move(moveDirection * Time.deltaTime);
 
         ScoreBoard.text = Score + " " + "/ 7 Coins Collected";
-        PlayerPrefs.SetInt("Score", Score);
+        
+        PlayerPrefs.SetInt("Score", (PreviouScore+ Score));
     }
 
     private void OnCollisionStay(Collision collision)
@@ -114,6 +118,7 @@ public class player : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(new Vector3(0, 10 * jumpSpeed, 0));
+        JumpSound.Play();
     }
 
     private void OnCollisionEnter(Collision collision)

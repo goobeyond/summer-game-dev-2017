@@ -21,6 +21,7 @@ public class CoinGrab : MonoBehaviour {
         CoinSound.Play();
         gameObject.SetActive(false);
         other.gameObject.GetComponent<player>().Score += 1;
+        
     }
   
 }
